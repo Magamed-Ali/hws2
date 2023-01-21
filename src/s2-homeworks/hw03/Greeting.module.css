@@ -10,6 +10,9 @@
 }
 
 .input {
+
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
 }
 
 .input:focus {
@@ -17,6 +20,7 @@
 
 .errorInput {
     border: 1px solid #CC0000;
+    border-radius: 5px;
 }
 
 .button {
