@@ -3,6 +3,7 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
 }
 
 .error {
@@ -10,12 +11,19 @@
 }
 
 .input {
-
     border: 1px solid #D1D1D1;
     border-radius: 5px;
+    padding: 8px 12px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
 }
 
 .input:focus {
+    border: 1px solid #a4a4a4;
 }
 
 .errorInput {
@@ -24,19 +32,44 @@
 }
 
 .button {
+    margin-left: 12px;
+    padding: 8px 24px;
+    background: #0066CC;
+    color: #FFFFFF;
+    border-radius: 3px;
+    border: 1px solid #212A34;
 }
 
 .button:focus {
+    background: #0066CC;
+    opacity: .5;
 }
 
 .button:active {
+    background: #0066CC;
+    opacity: .5;
 }
 
 .button:disabled {
+    background: #0066CC;
+    opacity: .5;
 }
 
 .text {
+    margin-bottom: 9px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
 }
