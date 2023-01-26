@@ -1,16 +1,24 @@
 .input:focus {
+
 }
 
 .input {
+    height: 40px;
+    min-width: 300px;
 }
 
 .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    color: #cc0000;
+    font-weight: 500;
 }
 
 .superInput {
 }
 
 .errorInput {
+    border: 1px solid #cc0000;
 }
 
 .errorInput:focus {
