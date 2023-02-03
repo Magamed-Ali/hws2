@@ -13,7 +13,7 @@ type SuperCheckboxPropsType = Omit<DefaultInputPropsType, 'type'> & {
     onChangeChecked?: (checked: boolean) => void
     spanClassName?: string
     children?: React.ReactNode
-    onChange1?: (checked: boolean) => void
+    onChange1?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
@@ -32,9 +32,8 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
 
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
 
-        onChangeChecked && onChangeChecked(e.currentTarget.checked)
-        onChange1 && onChange1(e.currentTarget.checked)
-
+        onChangeChecked?.(e.currentTarget.checked)
+        onChange1?.(e)
 
     }
 
