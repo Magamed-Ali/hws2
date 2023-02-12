@@ -1,5 +1,23 @@
 .buttonsContainer {
+
+}
+.buttonsContainer button{
+    margin-right: 15px;
+    margin-top: 15px;
 }
 
 .editableSpanContainer {
+    max-width: 400px;
+
+}
+
+.editableSpanContainer input:active {
+    font-size: 22px;
+}
+
+.editableSpanContainer input:focus {
+    outline: none;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    font-size: 22px;
 }
