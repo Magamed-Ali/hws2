@@ -16,6 +16,9 @@ const HW9 = () => {
 
             <div className={s2.hw}>
                 <Clock />
+
+                {/*date.toLocaleString("en", {hour12: false,hour: "numeric", minute: "numeric", second: "numeric"})*/}
+                {/*date.toLocaleString("en", {weekday: "long"})*/}
             </div>
         </div>
     )
