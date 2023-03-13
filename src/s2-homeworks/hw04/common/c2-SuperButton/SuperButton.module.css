@@ -38,6 +38,7 @@
 }
 
 .secondary:hover {
+
 }
 
 
@@ -51,4 +52,8 @@
 }
 
 .button:disabled {
+    border: 1px solid #004D99;
+    background: #004D99;
+    opacity: 0.5;
+    color: #cfddec;
 }
