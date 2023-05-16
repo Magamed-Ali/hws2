@@ -31,6 +31,8 @@ const HW14 = () => {
     const [techs, setTechs] = useState<string[]>([])
 
     const sendQuery = (value: string) => {
+
+        console.log("sendQuery запрос")
         setLoading(true)
         getTechs(value)
             .then((res) => {
@@ -52,7 +54,6 @@ const HW14 = () => {
         // делает студент
 
         // добавить/заменить значение в квери урла
-        sendQuery(value)
         // setSearchParams(
         setSearchParams(value)
         //
