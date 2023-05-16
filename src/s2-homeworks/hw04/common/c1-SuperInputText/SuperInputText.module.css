@@ -5,6 +5,15 @@
 .input {
     height: 40px;
     min-width: 300px;
+    max-width: 500px;
+    border: 1px solid #d7d2d2;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.input:focus-visible{
+
+    outline-color: #2d6cec;
 }
 
 .inputWrapper {
