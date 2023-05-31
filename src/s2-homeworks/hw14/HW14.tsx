@@ -32,7 +32,6 @@ const HW14 = () => {
 
     const sendQuery = (value: string) => {
 
-        console.log("sendQuery запрос")
         setLoading(true)
         getTechs(value)
             .then((res) => {
@@ -46,8 +45,6 @@ const HW14 = () => {
                 //
             })
     }
-
-    console.log("searchParams", searchParams)
 
     const onChangeText = (value: string) => {
         setFind(value)
