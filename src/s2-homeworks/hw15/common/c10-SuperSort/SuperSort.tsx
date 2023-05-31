@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ExpandIcon from '@mui/icons-material/Expand';
 
 // добавить в проект иконки и импортировать
-const downIcon = '[\\/]'
-const upIcon = '[/\\]'
-const noneIcon = '[--]'
+const downIcon = <KeyboardArrowDownIcon />
+const upIcon = <KeyboardArrowUpIcon />
+const noneIcon = <ExpandIcon />
 
 export type SuperSortPropsType = {
     id?: string
