@@ -62,9 +62,13 @@ const HW15 = () => {
                     switch (params.newSort) {
                         case "":
                             return setTechs(res.data.techs)
+                        case "0tech":
+                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
                         case "1tech":
                             return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
-                        case "0tech":
+                        case "0developer":
+                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
+                        case "1developer":
                             return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
                         default: setTechs(res.data.techs)
                     }
