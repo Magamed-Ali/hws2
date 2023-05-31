@@ -30,7 +30,7 @@ type ParamsType = {
 const getTechs = (params: ParamsType) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
-            'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test3',
+            'https://samurai.it-incubator.io/api/3.0/homework/test3',
             {params}
         )
         .catch((e) => {
@@ -47,38 +47,48 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
+    console.log(techs)
     const sendQuery = (params: any) => {
+        console.log("params", params)
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                setLoading(false)
                 // делает студент
-
+                if(res){
+                    setTotalCount(res.data.totalCount)
+                    setTechs(res.data.techs)
+                }
                 // сохранить пришедшие данные
-
                 //
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
         // setPage(
         // setCount(
-
         // sendQuery(
         // setSearchParams(
+        setPage(newPage)
+        setCount(newCount)
+        setSearchParams()
+        sendQuery({count, page, sort})
 
         //
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
         // sendQuery(
         // setSearchParams(
+
+        setSort(newSort)
+        setPage(1)
+        setSearchParams()
+        sendQuery({count, page, sort})
 
         //
     }

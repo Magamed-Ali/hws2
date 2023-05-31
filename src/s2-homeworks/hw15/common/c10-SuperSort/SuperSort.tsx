@@ -1,4 +1,5 @@
 import React from 'react'
+import HeightIcon from '@mui/icons-material/Height';
 
 // добавить в проект иконки и импортировать
 const downIcon = '[\\/]'
@@ -40,13 +41,13 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
         >
-            {/*сделать иконку*/}
-            {/*<img*/}
-            {/*    id={id + '-icon-' + sort}*/}
-            {/*    src={icon}*/}
-            {/*/>*/}
 
-            {icon} {/*а это убрать*/}
+            <HeightIcon id={id + '-icon-' + sort}/>
+            {/*<img
+                id={id + '-icon-' + sort}
+                src={}/>*/}
+
+            {/*{icon} а это убрать*/}
         </span>
     )
 }
