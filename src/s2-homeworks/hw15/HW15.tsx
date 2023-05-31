@@ -47,23 +47,36 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    console.log(techs)
+    console.log("sort", techs)
     const sendQuery = (params: any) => {
         console.log("params", params)
         setLoading(true)
         getTechs(params)
             .then((res) => {
-                setLoading(false)
+
                 // делает студент
                 if(res){
+                    setLoading(false)
                     setTotalCount(res.data.totalCount)
-                    setTechs(res.data.techs)
+                    //setTechs(res.data.techs)
+                    switch (params.newSort) {
+                        case "":
+                            return setTechs(res.data.techs)
+                        case "1tech":
+                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
+                        case "0tech":
+                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
+                        default: setTechs(res.data.techs)
+                    }
                 }
+
+
                 // сохранить пришедшие данные
                 //
             })
     }
 
+    console.log("1212", count, page, sort)
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
         // setPage(
@@ -88,7 +101,7 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1)
         setSearchParams()
-        sendQuery({count, page, sort})
+        sendQuery({count, page, newSort})
 
         //
     }

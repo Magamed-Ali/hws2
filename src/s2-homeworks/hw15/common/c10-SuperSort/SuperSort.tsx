@@ -1,10 +1,12 @@
-import React from 'react'
-import HeightIcon from '@mui/icons-material/Height';
+import React from 'react';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ExpandIcon from '@mui/icons-material/Expand';
 
 // добавить в проект иконки и импортировать
-const downIcon = '[\\/]'
-const upIcon = '[/\\]'
-const noneIcon = '[--]'
+const downIcon = <KeyboardArrowDownIcon />
+const upIcon = <KeyboardArrowUpIcon />
+const noneIcon = <ExpandIcon />
 
 export type SuperSortPropsType = {
     id?: string
@@ -15,7 +17,14 @@ export type SuperSortPropsType = {
 
 export const pureChange = (sort: string, down: string, up: string) => {
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    console.log("sort", sort)
+    if(sort === ""){
+        return sort = down
+    }else if (sort === "1tech"){
+        return sort = up
+    }else {
+        return ""
+    }
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
@@ -38,16 +47,17 @@ const SuperSort: React.FC<SuperSortPropsType> = (
 
     return (
         <span
+            style={{cursor: "pointer"}}
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
         >
-
-            <HeightIcon id={id + '-icon-' + sort}/>
-            {/*<img
+            {/*сделать иконку*/}
+            <img
                 id={id + '-icon-' + sort}
-                src={}/>*/}
+                src={""}
+            />
 
-            {/*{icon} а это убрать*/}
+            {icon}
         </span>
     )
 }
