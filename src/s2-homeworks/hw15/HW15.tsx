@@ -58,8 +58,8 @@ const HW15 = () => {
                 if(res){
                     setLoading(false)
                     setTotalCount(res.data.totalCount)
-                    //setTechs(res.data.techs)
-                    switch (params.newSort) {
+                    setTechs(res.data.techs)
+                    /*switch (params.newSort) {
                         case "":
                             return setTechs(res.data.techs)
                         case "0tech":
@@ -71,7 +71,7 @@ const HW15 = () => {
                         case "1developer":
                             return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
                         default: setTechs(res.data.techs)
-                    }
+                    }*/
                 }
 
 
@@ -80,7 +80,6 @@ const HW15 = () => {
             })
     }
 
-    console.log("1212", count, page, sort)
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
         // setPage(

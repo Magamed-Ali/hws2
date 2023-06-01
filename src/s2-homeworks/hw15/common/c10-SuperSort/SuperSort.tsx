@@ -20,7 +20,7 @@ export const pureChange = (sort: string, down: string, up: string) => {
     console.log("sort", sort)
     if(sort === ""){
         return sort = down
-    }else if (sort === "1tech"){
+    }else if (sort === "1tech" || sort === "1developer"){
         return sort = up
     }else {
         return ""
