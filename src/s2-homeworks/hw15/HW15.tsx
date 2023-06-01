@@ -59,22 +59,7 @@ const HW15 = () => {
                     setLoading(false)
                     setTotalCount(res.data.totalCount)
                     setTechs(res.data.techs)
-                    /*switch (params.newSort) {
-                        case "":
-                            return setTechs(res.data.techs)
-                        case "0tech":
-                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
-                        case "1tech":
-                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
-                        case "0developer":
-                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
-                        case "1developer":
-                            return setTechs(res.data.techs.sort((a, b) => b.id - a.id))
-                        default: setTechs(res.data.techs)
-                    }*/
                 }
-
-
                 // сохранить пришедшие данные
                 //
             })
@@ -104,7 +89,7 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1)
         setSearchParams()
-        sendQuery({count, page, newSort})
+        sendQuery({count, page, sort: newSort})
 
         //
     }
